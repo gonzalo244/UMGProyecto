@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>UMGProyecto</title>
-    <%= csrf_meta_tags %>
+    <head>
+            <title>Manejo de Recursos Humanos</title>
+            <%= stylesheet_link_tag    "application", :media => "all" %>
+            <%= javascript_include_tag "application" %>
+            <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    </head>
+    <body>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a href="../">Inicio</a></li>
+          <li role="presentation"><a href="#">Agregar Persona</a></li>
+          <li role="presentation"><a href="#">Ver Trabajadores</a></li>
+          <li role="presentation"><a href="#">Programar Tareas</a></li>
+          <li role="presentation"><a href="#">Asignar Comisiones</a></li>
+          <li role="presentation"><a href="#">Permisos</a></li>
+        </ul>
 
-  <body>
-    <%= yield %>
-  </body>
+        <div class="main container">
+                <%= yield %>
+        </div>
+    </body>
 </html>
